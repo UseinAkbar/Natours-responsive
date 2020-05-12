@@ -28,3 +28,42 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+// MEDIA QUERY MANAGER
+
+//If mobile first, write from the smallest min-width to the largest
+//If desktop first, write from the largest max-width to the smallest
+
+//ORDER in set media query:
+//Base + typography > general layout + grid > page layout > components
+
+// 0 - 600px:            Phone
+// 600px - 900px:        Tablet-portrait
+// 900px - 1200px:       Tablet-landscape
+// 1200px - 1800px is where our style applied
+// 1800px - +++:         Big desktop
+
+// $breakpoint argument choices:
+// - phone
+// - tab-portrait
+// - tab-land
+// - big-desktop
+
+//em is the best solution for media query
+// 1em = 16px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {@content}; //600px
+  }
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 56.25em) {@content}; //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {@content}; //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {@content}; //1800px
+  }
+}

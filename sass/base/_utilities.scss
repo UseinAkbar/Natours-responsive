@@ -7,10 +7,16 @@
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+  @include respond(tab-portrait) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
+  @include respond(tab-portrait) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-margin-bottom-small {
@@ -19,6 +25,9 @@
 
 .u-margin-top-big {
   margin-top: 8rem !important;
+  @include respond(tab-portrait) {
+    margin-top: 4rem !important;
+  }
 }
 
 .u-margin-top-huge {

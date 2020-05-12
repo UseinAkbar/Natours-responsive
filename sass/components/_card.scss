@@ -10,16 +10,16 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: .4rem;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: .8s ease-out;
 
 
 
     &--front {
       background-color: white;
-
+      box-shadow: 0 1rem 4rem rgba($color-black, .15);
     }
 
     &--back {
@@ -42,11 +42,10 @@
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
-    box-shadow: 0 1rem 4rem rgba($color-black, .15);
   }
 
   &:hover &__side--back {
-    transform: rotateY(0deg);
+    transform: rotateY(0);
   }
 
   // FRONT SIDE STYLING
@@ -54,22 +53,31 @@
       background-size: cover;
       height: 24rem;
       background-blend-mode: screen;
-      -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 58%, 100% 70%, 83% 73%, 47% 83%, 0 99%, 0% 43%, 0 0);
-      clip-path: polygon(50% 0%, 100% 0, 100% 58%, 100% 70%, 83% 73%, 47% 83%, 0 99%, 0% 43%, 0 0);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
       border-top-left-radius: .4rem;
       border-top-right-radius: .4rem;
 
 
     &--1 {
-      background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url('../images/nat-5.jpg');
+      background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url('../images/nat-5-small.jpg');
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
+        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url('../images/nat-5.jpg');
+      }
     }
 
     &--2 {
-      background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark), url('../images/nat-6.jpg');
+      background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark), url('../images/nat-6-small.jpg');
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
+        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url('../images/nat-6.jpg');
+      }
     }
 
     &--3 {
-      background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark), url('../images/nat-7.jpg');
+      background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark), url('../images/nat-7-small.jpg');
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
+        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url('../images/nat-7.jpg');
+      }
     }
 }
 
@@ -83,6 +91,9 @@
     top: 12rem;
     right: 1.5rem;
     width: 75%;
+    @include respond(tab-portrait) {
+      width: 60%;
+    }
 
   }
 
@@ -149,6 +160,65 @@
     font-weight: 100;
     display: inline-block;
     border-bottom: 1px solid #eee;
+
+  }
+
+
+
+//This happen when the device have no hover functionality, like mobile or iPad
+  @media only screen and (max-width: 56.25em),
+         only screen and (hover :none) {
+
+    height: auto;
+    border-radius: .4rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    border-bottom-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+
+      }
+    }
+
+    &__details {
+      padding: 2rem 3rem;
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      text-align: center;
+      padding: 7rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-only {
+      margin-bottom: 2rem;
+    }
+
+    &__price-value {
+      font-size: 5rem;
+
+    }
 
   }
 

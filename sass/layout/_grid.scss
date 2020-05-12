@@ -3,17 +3,40 @@
   margin: 0 auto;
   @include clearfix;
 
+  @include respond(tab-portrait) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+  @include respond(phone) {
+    max-width: 44rem;
+  }
+
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+
+    @include respond(tab-portrait) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+
   [class^="col-"] {
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
     }
 
-  }
+    @include respond(tab-portrait) {
+      width: 100% !important;
+    }
 
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
   }
 
   .col-1-of-2 {

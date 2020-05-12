@@ -1,10 +1,13 @@
 .form {
-
+  
    &__group {
+      @include clearfix;
 
       &:not(:last-child) {
         margin-bottom: 1rem;
       }
+
+
    }
 
    &__input {
@@ -19,20 +22,20 @@
      display: block;
      border: none;
      border-bottom : 3px solid transparent;
+     @include respond(tab-portrait) {
+       width: 100%;
+
+     }
 
      &:focus {
        outline: none;
        box-shadow: 0 1rem 2rem rgba($color-black, .1);
        border-bottom : 3px solid $color-primary;
-       border-bottom-left-radius: 6px;
-       border-bottom-right-radius: 3px;
        transition: .4s;
      }
 
      &:focus:invalid {
        border-bottom: 3px solid $color-secondary-dark;
-       border-bottom-left-radius: 0px;
-       border-bottom-right-radius: 0px;
        caret-color: $color-primary-light;
      }
 
@@ -60,11 +63,22 @@
 
    &__radio-group {
      float: left;
+     display: inline-block;
+     @include respond(tab-portrait) {
+       width: 100%;
+       border: none;
+     }
 
      &:not(:last-child) {
       width: 20rem;
       border-right: 1px solid $color-grey-dark;
       margin-right: 3.8rem;
+      @include respond(tab-portrait) {
+        width: 100%;
+        border: none;
+        margin-bottom: 2rem;
+      }
+
      }
    }
 
@@ -93,21 +107,30 @@
      &::after {
       content: '';
       display: inline-block;
+      @include absoluteCentered;
       background-color: $color-primary;
       height: 1.3rem;
       width: 1.3rem;
       border-radius: 50%;
-      position: absolute;
       opacity: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: .2s;
+      @include respond(tab-land) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -48%);
+      }
+      @include respond(tab-portrait) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -53%);
+      }
+
     }
    }
 
-   &__radio-input:checked ~ &__radio-label &__radio-button::after {
-    opacity: 1;
+   &__radio-input:checked + &__radio-label &__radio-button::after {
+    animation: zoom .6s ease-out infinite alternate forwards;
   }
 
    &__radio-input:checked + &__radio-label {

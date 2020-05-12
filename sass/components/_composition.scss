@@ -8,22 +8,50 @@
     position: absolute;
     z-index: 10;
     outline-offset: 1.4rem;
+    outline: none;
     transition: .2s;
+    @include respond(tab-portrait) {
+      float: left;
+      position: relative;
+      width: 33.333333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+
+    }
 
     &--p1 {
       top: -2rem;
       left: .5rem;
+      z-index: 8;
+      @include respond(tab-portrait) {
+        top: 1rem;
+        transform: scale(1.2);
+        animation: moveLeft 1s ease-in infinite alternate forwards;
+      }
 
     }
 
     &--p2 {
       top: 2.5rem;
       right: 0;
+      z-index: 9;
+      @include respond(tab-portrait) {
+        top: 1rem;
+        left: 0;
+        transform: scale(1.2);
+        z-index: 9;
+        animation: moveRight 1s ease-in infinite alternate forwards;
+      }
     }
 
     &--p3 {
       top: 11rem;
       left: 8rem;
+      @include respond(tab-portrait) {
+        top: 0;
+        left: 0;
+        transform: scale(1.2);
+        animation: moveTop 1s ease-in infinite alternate forwards;
+      }
     }
 
     &:hover {
@@ -31,6 +59,12 @@
       transform: scale(1.10) translateY(-1rem);
       box-shadow: 0 0 3.5rem 4rem rgba($color-black, .2);
       z-index: 20;
+      @include respond(tab-portrait) {
+        box-shadow: 0 0 2.5rem 2rem rgba($color-black, .2);
+        outline: .6rem solid $color-primary;
+        outline-offset: .7rem;
+
+      }
     }
   }
 

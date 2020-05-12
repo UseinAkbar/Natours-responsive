@@ -10,10 +10,8 @@
 
   <link rel="stylesheet" href="src/css/icon-font.css">
   <link rel="shortcut icon" type="image/png" href="src/images/favicon.png">
-  <link rel="stylesheet" href="src/css/icon-font.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="src/css/styles.css">
-
 
   <title>Natours | Bring you to extraordinary trip</title>
 </head>
@@ -48,7 +46,7 @@
         <span class="heading-primary--main">Outdoors</span>
         <span class="heading-primary--sub">Is Where Life Happens</span>
       </h1>
-      <a href="#" class="btn btn--white btn--animated">Discover Our Tours</a>
+      <a href="#section-tours" class="btn btn--white btn--animated">Discover Our Tours</a>
     </div>
   </header>
 
@@ -69,9 +67,18 @@
         </div>
         <div class="col-1-of-2">
           <div class="composition">
-            <img src="src/images/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+            <img srcset="src/images/nat-1.jpg 300w, src/images/nat-1-large.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+            alt="Photo 1" class="composition__photo composition__photo--p1" src="src/images/nat-1-large.jpg">
+
+            <img srcset="src/images/nat-3.jpg 300w, src/images/nat-3-large.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+            alt="Photo 3" class="composition__photo composition__photo--p3" src="src/images/nat-3-large.jpg">
+
+            <img srcset="src/images/nat-2.jpg 300w, src/images/nat-2-large.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+            alt="Photo 2" class="composition__photo composition__photo--p2" src="src/images/nat-2-large.jpg">
+
+            <!-- <img src="src/images/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
             <img src="src/images/nat-3-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-            <img src="src/images/nat-2-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+            <img src="src/images/nat-2-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
           </div>
         </div>
       </div>
@@ -229,11 +236,14 @@
       <div class="row">
         <div class="story">
           <figure class="story__shape">
-            <img src="src/images/nat-8.jpg" alt="Person on a tour" class="story__img">
+            <img srcset="src/images/nat-8.jpg 1200w, src/images/nat-8-large.jpg 2000w" alt="Person on a tour"
+            sizes="(max-width: 56.25em) 24vw, (max-width: 37.5em) 24vw, 270px" class="story__img" src="src/images/nat-8-large.jpg">
+
+            <!-- <img src="src/images/nat-8-large.jpg" alt="Person on a tour" class="story__img"> -->
             <figcaption class="story__caption">Mary Austin</figcaption>
           </figure>
           <div class="story__text">
-            <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family. . .</h3>
+            <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family. .</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
           </div>
         </div>
@@ -242,11 +252,15 @@
       <div class="row">
         <div class="story">
           <figure class="story__shape">
-            <img src="src/images/nat-9.jpg" alt="Person on a tour" class="story__img">
+            <img srcset="src/images/nat-9.jpg 1200w, src/images/nat-9-large.jpg 2000w" alt="Person on a tour"
+            sizes="(max-width: 56.25em) 23vw, (max-width: 37.5em) 23vw, 270px" class="story__img" src="src/images/nat-9-large.jpg">
+
+
+            <!-- <img src="src/images/nat-9-large.jpg" alt="Person on a tour" class="story__img"> -->
             <figcaption class="story__caption">Dan James</figcaption>
           </figure>
           <div class="story__text">
-            <h3 class="heading-tertiary u-margin-bottom-small">Wow! My life is completely different now. . .</h3>
+            <h3 class="heading-tertiary u-margin-bottom-small">Wow! My life is completely different now. .</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
           </div>
         </div>
@@ -294,7 +308,7 @@
               </div>
             </div>
             <div class="form__group u-margin-top-big">
-              <button type="submit" class="btn btn--green" name="button">Next Step &rarr;</button>
+              <button type="submit" class="btn btn--green form__group-btn" name="button">Next Step &rarr;</button>
             </div>
           </form>
         </div>
@@ -305,11 +319,16 @@
 
   <footer class="footer">
     <div class="footer__logo-box">
-      <img src="src/images/logo-green-2x.png" alt="Full logo" class="footer__logo">
+      <picture>
+        <source srcset="src/images/logo-green-small-1x.png 1x, src/images/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+          <img srcset="src/images/logo-green-1x.png 1x, src/images/logo-green-2x.png 2x" alt="Full logo" class="footer__logo"
+          src="src/images/logo-green-2x.png">
+      </picture>
     </div>
+
     <div class="row">
       <div class="col-1-of-2">
-        <div class="footer__navigation u-margin-bottom-big">
+        <div class="footer__navigation u-margin-bottom-small">
           <ul class="footer__list">
             <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
             <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
@@ -318,18 +337,19 @@
             <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
           </ul>
         </div>
-        <div class="footer__sosmed">
-          <a href="#" class="footer__sosmed-link"><i class="fab fa-instagram fa-2x"></i></a>
-          <a href="#" class="footer__sosmed-link"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="#" class="footer__sosmed-link"><i class="fab fa-facebook-f fa-2x"></i></a>
-        </div>
       </div>
 
       <div class="col-1-of-2">
         <p class="footer__copyright">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur modi est, culpa fugit nesciunt doloremque cumque dignissimos <a href="#" class="footer__link">Usein Akbar</a> voluptate provident ullam saepe, dolore magnam repellat nam. Commodi, nisi, incidunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
         </p>
+
       </div>
+    </div>
+    <div class="footer__sosmed u-margin-bottom-medium">
+      <a href="#" class="footer__sosmed-link"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="#" class="footer__sosmed-link"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#" class="footer__sosmed-link"><i class="fab fa-facebook-f fa-2x"></i></a>
     </div>
 
     <div class="copyright">
@@ -340,8 +360,14 @@
   <div class="popup" id="popup">
     <div class="popup__content">
       <div class="popup__left">
-        <img src="src/images/nat-8.jpg" alt="Tour photo" class="popup__img">
-        <img src="src/images/nat-9.jpg" alt="Tour photo" class="popup__img">
+        <img srcset="src/images/nat-8.jpg 1200w, src/images/nat-8-large.jpg 2000w" alt="Tour photo"
+        sizes="(min-width: 56.25em) 25vw, 2000px" class="popup__img popup__img--1" src="src/images/nat-8-large.jpg">
+        <img srcset="src/images/nat-9.jpg 1200w, src/images/nat-9-large.jpg 2000w" alt="Tour photo"
+        sizes="(min-width: 56.25em) 25vw, 2000px" class="popup__img popup__img--2" src="src/images/nat-9-large.jpg">
+
+
+        <!-- <img src="src/images/nat-8-large.jpg" alt="Tour photo" class="popup__img">
+        <img src="src/images/nat-9-large.jpg" alt="Tour photo" class="popup__img"> -->
       </div>
       <div class="popup__right">
         <a href="#section-tours" class="popup__close">&times;</a>
@@ -359,53 +385,7 @@
 
 
 
-  <!-- .story {
-  width: 75%;
-  margin: 0 auto;
-  background-color: $color-white;
-  padding: 6rem;
-  padding-left: 9rem;
-  font-size: $default-font-size;
-  transform: skewX(-12deg);
 
-  &__shape {
-    width: 15rem;
-    height: 15rem;
-    float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
-    position: relative;
-  }
-
-  &__img {
-    height: 100%;
-    transform: translateX(-4rem) scale(1.2);
-  }
-
-  &__text {
-    transform: skewX(12deg);
-  }
-
-  &__caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-transform: uppercase;
-    color: $color-white;
-    text-align: center;
-    transform: translate(-50%, 10%);
-    opacity: 0;
-    transition: .4s;
-  }
-
-  &:hover &__caption {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-  }
-} -->
   <!-- <section class="grid-test">
     <div class="row">
       <div class="col-1-of-2">
