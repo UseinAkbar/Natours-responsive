@@ -519,7 +519,7 @@ body {
     .story {
       transform: skewX(0);
       background-color: transparent;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)); } }
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), white); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -787,7 +787,7 @@ body {
     opacity: 1; }
     @media only screen and (min-resolution: 192dpi) and (max-width: 56.25em) {
       .popup:target .popup__content {
-        background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/sunset.jpg");
+        background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/sunset.jpg");
         background-size: cover;
         background-position: bottom;
         color: rgba(255, 255, 255, 0.8); } }
@@ -818,7 +818,10 @@ body {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
       clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
-      height: 95vh; } }
+      height: 95vh; }
+      @media only screen and (max-width: 37.5em) {
+        .header {
+          height: 92vh; } } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../images/hero.jpg"); } }
@@ -1146,6 +1149,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-about {
+      padding: 22rem 0; } }
   .section-about__icon {
     position: absolute;
     z-index: 100;

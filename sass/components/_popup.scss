@@ -103,7 +103,7 @@
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     @media only screen and (min-resolution: 192dpi) and (max-width: 56.25em) {
-      background-image: linear-gradient(to bottom right, rgba($color-black, .5), rgba($color-black, .5)), url('../images/sunset.jpg');
+      background-image: linear-gradient(to bottom right, rgba($color-black, .7), rgba($color-black, .7)), url('../images/sunset.jpg');
       background-size: cover;
       background-position: bottom;
       color: rgba($color-white, .8);
