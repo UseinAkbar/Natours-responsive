@@ -916,9 +916,7 @@ body {
       height: auto;
       border-radius: .4rem;
       background-color: #fff;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-      border-bottom-right-radius: 4rem;
-      border-bottom-left-radius: 4rem; }
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
       .card__side {
         height: auto;
         position: relative;
@@ -926,7 +924,8 @@ body {
         .card__side--back {
           transform: rotateY(0);
           -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+          border-radius: 0 0 .4rem .4rem; }
       .card__details {
         padding: 2rem 3rem; }
       .card:hover .card__side--front {
