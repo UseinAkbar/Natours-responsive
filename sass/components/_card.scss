@@ -173,8 +173,6 @@
     border-radius: .4rem;
     background-color: $color-white;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-    border-bottom-right-radius: 4rem;
-    border-bottom-left-radius: 4rem;
 
     &__side {
       height: auto;
@@ -185,6 +183,7 @@
         transform: rotateY(0);
         -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        border-radius: 0 0 .4rem .4rem;
 
       }
     }
