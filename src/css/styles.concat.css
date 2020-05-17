@@ -849,12 +849,12 @@ body {
       background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url("../images/nat-6-small.jpg"); }
       @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
         .card__picture--2 {
-          background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url("../images/nat-6.jpg"); } }
+          background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url("../images/nat-6.jpg"); } }
     .card__picture--3 {
       background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url("../images/nat-7-small.jpg"); }
       @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
         .card__picture--3 {
-          background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url("../images/nat-7.jpg"); } }
+          background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url("../images/nat-7.jpg"); } }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -1063,15 +1063,15 @@ body {
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
-  margin-left: 2.1rem;
-  margin-top: .7rem;
+  margin-top: 1rem;
   display: inline-block;
+  transform: translateY(-8.4rem);
   transition: .3s; }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-4.4rem); }
+  transform: translate(2rem, -4.4rem); }
 
 .form__radio-group {
   float: left;
@@ -1350,11 +1350,11 @@ body {
     border-top: 0.5px solid #777;
     padding-top: 2rem;
     width: 80%;
-    display: inline-block; }
+    display: inline-block;
+    text-align: center; }
     @media only screen and (max-width: 56.25em) {
       .footer__navigation {
-        width: 100%;
-        text-align: center; } }
+        width: 100%; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -1387,11 +1387,11 @@ body {
     border-top: 0.5px solid #777;
     padding-top: 2rem;
     width: 80%;
-    float: right; }
+    float: right;
+    text-align: center; }
     @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
-        text-align: center;
         float: none; } }
   .footer__sosmed {
     width: 100%;

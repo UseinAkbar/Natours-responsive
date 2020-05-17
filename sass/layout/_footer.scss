@@ -25,9 +25,9 @@
     padding-top: 2rem;
     width: 80%;
     display: inline-block;
+    text-align: center;
     @include respond(tab-portrait) {
       width: 100% ;
-      text-align: center;
     };
   }
 
@@ -79,9 +79,9 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+    text-align: center;
     @include respond(tab-portrait) {
       width: 100% ;
-      text-align: center;
       float: none;
     };
   }
