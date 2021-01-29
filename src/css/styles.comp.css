@@ -8,7 +8,8 @@
 /* 100% equal to 16px */
 /* 62.5% equal to 10px */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -919,19 +920,14 @@ body {
       transform: rotate(-5deg) scale(1.2); }
     .footer__item:not(:last-child) {
       margin-right: 1rem; }
-  .footer__link {
+  .footer__link, .footer__link:visited {
     background-color: #333;
+    color: #f7f7f7;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
     transition: .2s; }
-    .footer__link:visited {
-      background-color: #333;
-      color: #f7f7f7;
-      text-decoration: none;
-      text-transform: uppercase;
-      display: inline-block; }
-    .footer__link:hover, .footer__link:active {
+    .footer__link:hover, .footer__link:active, .footer__link:visited:hover, .footer__link:visited:active {
       color: #55c57a;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
       transform: rotate(5deg) scale(1.2); }
